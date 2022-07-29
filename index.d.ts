@@ -8,7 +8,8 @@ declare class BeeQueue<T = any> extends EventEmitter {
   name: string;
   keyPrefix: string;
   jobs: any;
-  paused: boolean;
+  /// @readonly whether this queue is paused.
+  readonly paused: boolean;
   settings: any;
   backoffStrategies: Map<string, (job: BeeQueue.Job<T>) => number>;
 
